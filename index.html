@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="weather.css">
+		<link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Charmonman" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/ede4a05215.js"></script>
+		<title>Weather Tracker</title>
+	</head>
+	<body>
+		<div id="title">
+		<h1>Weather Tracker</h1>
+		<i id="sun" class="fas fa-sun fa-7x"></i>
+		</div>
+		<div id="main">
+			<form>
+				<p>Please Enter the Name of a City to Get the Temperature</p>
+				<input type="text" name="city" id="cityName" placeholder="Oakland">
+				<input type="submit" value="Submit" id="citySubmit">
+				<p>Or Alternatively: Please Enter a American Zip Code</p>
+				<input type="text" name="zip" id="zipCode" placeholder="123456">
+				<input type="submit" value="Submit" id="zipSubmit">
+				<br>
+				<p id="temperature"></p>
+			</form>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
