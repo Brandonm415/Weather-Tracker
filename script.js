@@ -10,7 +10,7 @@ document.getElementById("citySubmit").addEventListener("click", function(event) 
             var response = JSON.parse(req.responseText);
             document.getElementById("temperature").textContent = "Temperature of " + response.name + " is: " + response.main.temp + " degrees Fahrenheit";
         } else {
-            document.getElementById("temperature").textContent = "Error";
+            document.getElementById("temperature").textContent = "Error, cannot read city.";
         }
     });
     req.send(null);
@@ -27,7 +27,7 @@ document.getElementById("zipSubmit").addEventListener("click", function(event) {
             var response = JSON.parse(req.responseText);
             document.getElementById("temperature").textContent = "Temperature of " + response.name + " is: " + response.main.temp + " degrees Fahrenheit";
         } else {
-            document.getElementById("temperature").textContent = "Error";
+            document.getElementById("temperature").textContent = "Error, cannot read zip.";
             console.log("Error in network request: " + req.statusText);
         }
     });
