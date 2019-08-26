@@ -4,7 +4,7 @@ var apiKey = "5fef18abf55764f86ff63721f89b9eb5";
 document.getElementById("citySubmit").addEventListener("click", function(event) {
     var req = new XMLHttpRequest();
     var city = document.getElementById("cityName").value;
-    req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + apiKey, true);
+    req.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + apiKey, true);
     req.addEventListener("load", function() {
         if (req.status >= 200 && req.status < 400) {
             var response = JSON.parse(req.responseText);
@@ -21,7 +21,7 @@ document.getElementById("citySubmit").addEventListener("click", function(event) 
 document.getElementById("zipSubmit").addEventListener("click", function(event) {
     var req = new XMLHttpRequest();
     var zip = document.getElementById("zipCode").value;
-    req.open("GET", "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + "&units=imperial" + "&appid=" + apiKey, true);
+    req.open("GET", "https://api.openweathermap.org/data/2.5/weather?zip=" + zip + "&units=imperial" + "&appid=" + apiKey, true);
     req.addEventListener("load", function() {
         if (req.status >= 200 && req.status < 400) {
             var response = JSON.parse(req.responseText);
